@@ -1,10 +1,9 @@
-import React from 'react';
-import './header.css';
+import "./header.css";
 
 function Header() {
   return (
-    <header className="header">
-      <h1>React Lego</h1>
+    <header>
+      <h1>Vente de Lego</h1>
     </header>
   );
 }
