@@ -2,22 +2,23 @@ import Card from "../Card/Card";
 import products from "../../../data/product"
 import "./list.css";
 
-function List() {
+function List({total, onUpdateTotal}) {
   return (
     <div className="product-list">
       {products.map(
-        (product, index) => (
+        (product) =>
           product.available && (
-          <Card
-            key={index}
-            name={product.name}
-            tag={product.tag}
-            price={product.price}
-            available={product.available}
-            imageSrc={product.imageSrc}
-          />
-        )
-        )
+            <Card
+              key={product.id}
+              name={product.name}
+              tag={product.tag}
+              price={product.price}
+              imageSrc={product.imageSrc}
+              availabe={product.available}
+              total={total}
+              onUpdateTotal={onUpdateTotal}
+            />
+          )
       )}
     </div>
   );
