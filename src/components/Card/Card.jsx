@@ -1,6 +1,17 @@
-function Card({ name, tag, price, imageSrc, available, total, onUpdateTotal }) {
+function Card({ 
+  name, 
+  tag, 
+  price, 
+  imageSrc, 
+  available, 
+  total, 
+  onUpdateTotal,
+  articles,
+  onUpdateArticles
+}) {
   const handleClick = () => {
     onUpdateTotal(total + price);
+    onUpdateArticles([...articles, name]);
   };
 
   return (  
